@@ -16,9 +16,6 @@
     "type": "git",
     "url": "git+https://github.com/ywenc/snack-man.git"
   },
-  "bugs": {
-    "url": "https://github.com/ywenc/snack-man/issues"
-  },
   "homepage": "https://github.com/ywenc/snack-man#readme",
   "dependencies": {
     "babel-core": "^6.21.0",

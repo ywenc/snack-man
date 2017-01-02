@@ -1,0 +1,110 @@
+.profile {
+  float: left;
+  padding: 25px 70px 25px 15px;
+  max-width: 100%;
+}
+
+.profile h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 35px;
+}
+
+.profile span {
+  text-decoration: underline;
+  color: blue;
+  display: block;
+  font-size: 14px;
+}
+
+.profile ul {
+  width: 300px;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile ul li:first-child {
+  padding-left: 0;
+}
+
+.profile ul li {
+  padding: 0 2px;
+  float: left;
+  margin-right: 25px;
+}
+
+.profile ul li:hover {
+  cursor: pointer;
+}
+
+
+.content {
+  float: left;
+  padding: 35px 15px;
+  max-width: 100%;
+  width: 600px;
+  /*width: calc(100vw - 400px);*/
+}
+
+/*@media (max-width: 600px) {
+  .content {
+    width: calc(100vw - 400px);
+  }
+}*/
+
+.links {
+  display: block;
+}
+
+.links a{
+  display: block;
+}
+
+.content li{
+  display: block;
+  padding-bottom: 25px;
+}
+
+.content li div{
+  display: block;
+}
+
+.content li div a{
+  float: left;
+  text-decoration: underline;
+  padding-right: 25px;
+}
+
+.content li span{
+  display: block;
+}
+
+.description {
+  font-size: 12px;
+}
+
+.skills {
+  max-width: 100%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+}
+
+.skills ul {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills ul i {
+  font-size: 50px;
+  padding: 0 45px 45px 0;
+  float: left;
+}
+
+.group:after {
+  clear: both;
+  content: '';
+  display: block;
+}
