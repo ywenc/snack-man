@@ -17,11 +17,10 @@ time, mark, audio, video, * {
   border: 0;
   background: transparent;
 
-  color: #1a1a1a;
+  font-family: 'Source Code Pro', monospace;
 
-  /*font-family: 'Nunito Sans', sans-serif;
-  font-family: 'Open Sans', sans-serif;*/
-  font-family: 'Roboto', sans-serif;
+  color: white;
+
   font-weight: 400;
 
   list-style: none;

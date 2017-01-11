@@ -1,0 +1,53 @@
+article {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+main {
+  width: 600px;
+  display: block;
+  float: left;
+}
+
+aside {
+  float: right;
+  width: 350px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+}
+
+h2,
+h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+}
+
+section a {
+  text-decoration: underline;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.group:after {
+  content: '';
+  clear: both;
+  display: block;
+}

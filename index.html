@@ -3,19 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>snack-man</title>
-
-    <style type="text/css">
-      canvas {
-        margin: 0 auto;
-        width: 600px;
-        display: block;
-      }
-  </style>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="assets/reset.css" />
+    <link rel="stylesheet" href="assets/style.css" />
 
   </head>
-  <body style="background-color:black;overflow:hidden;">
-      <canvas></canvas>
+  <body>
+    <article class="group">
+
+      <main>
+        <h1>snack-man</h1>
+        <canvas>
+        </canvas>
+      </main>
+
+      <aside class="info group">
+        <section class="instructions group">
+          <h2>Instructions:</h2>
+          <p>
+            Press N to start a new game <br> <br>
+
+            Use arrow keys control snack-man's direction
+          </p>
+        </section>
+
+        <section class="links group">
+          <a href="https://github.com/ywenc/snack-man">GitHub</a>
+          <a href="http://yywenc.com/">Portfolio</a>
+          <a href="http://linkedin.com/in/ywenc/">LinkedIn</a>
+        </section>
+      </aside>
+    </article>
+
     <script type="application/javascript" src="vendor/keymaster.js"></script>
     <script type="application/javascript" src="lib/bundle.js"></script>
+
+
   </body>
 </html>
