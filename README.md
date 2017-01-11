@@ -1,7 +1,7 @@
 # snack-man
 A clone of the popular arcade game Pac-Man.
 
-[snack-man Live](http://www.snack-man.heroku.com/)
+[snack-man Live](http://www.yywenc.com/snack-man)
 
 ### Background
 Pac-Man with more snacks! The player controls snack-man through a maze, eating snack-dots. snack-man wins when all pac-dots are eaten. snack-man must avoid ghosts, or he will lose a life. Eating a big snack-dot gives him the temporary ability to eat his ghosts.
