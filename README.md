@@ -1,39 +1,60 @@
-# snack-man
-A clone of the popular arcade game Pac-Man.
+#Snack-Man
+[Snack-Man Live](http://www.yywenc.com/snack-man)
 
-[snack-man Live](http://www.yywenc.com/snack-man)
+## Instructions
+#### Gameplay
+A clone of the arcade game Pac-Man! Eat all the pellets in the maze without getting eaten by a ghost. Eating a large pellet will make you invincible to the ghosts. Eat them when they turn blue.
 
-### Background
-Pac-Man with more snacks! The player controls snack-man through a maze, eating snack-dots. snack-man wins when all pac-dots are eaten. snack-man must avoid ghosts, or he will lose a life. Eating a big snack-dot gives him the temporary ability to eat his ghosts.
+#### Controls
+- "N" to start a new game.
+- The arrow keys will control Pac-Man's direction.
 
-### Functionality & MVP
-Users will be able to
-- [ ] Start, pause, and reset the game board
-- [ ] Move around the board with arrow keys
+## Main technologies
+- HTML5/CSS3
+- HTML 5 Canvas
+- JavaScript ES6
+- Object-Oriented Programming
 
-### Wireframes
+## Features and Implementation
+### Maze Generator
+The maze is generated dynamically using a function to turn each cell into a node. This allows for new levels to be easily and quickly generated. It also allows for pathfinding algorithms to be implemented in the future.
+```javascript
+setUpMaze() {
+  const spriteHeight = this.game.spriteHeight;
+  let xStart = 48;
+  let yStart = 48;
 
-This app will consist of a single screen with game board, game controls, and nav links to the Github and my LinkedIn.  Game controls will include Start, Pause, and Reset buttons. Player moves around the board with arrow keys.
+  for (let x = 0; x < this.maze.length; x++) {
+    let row = [];
+    for (let y = 0; y < this.maze[0].length; y++) {
+      row.push(new mazeNode(
+        [x, y],
+        [xStart, yStart],
+        this.maze[x][y],
+        spriteHeight)
+      );
 
-### Architecture and Technologies
+      xStart += 2 * spriteHeight;
+    }
+    this.mazeNodes.push(row);
+    xStart = 48;
+    yStart += 2 * spriteHeight + 1;
+  }
+}
 
-This project will be implemented with the following technologies:
+drawMaze(ctx) {
+  this.edibles = 0;
+  this.mazeNodes.forEach((row) => {
+    row.forEach((mazeNode) => {
+      mazeNode.draw(ctx);
+      if (mazeNode.sym === '.' || mazeNode.sym === 'O') {
+        this.edibles += 1;
+      }
+    });
+  });
+}
+```
 
-- Vanilla JavaScript
-- `HTML5 Canvas` for DOM manipulation and rendering,
-- Webpack to bundle and serve up the various scripts.
-
-### Implementation Timeline
-
-**Day 1**: Setup all necessary Node modules, including getting webpack up and running and `Canvas.js` installed.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 3 scripts outlined above.  Refresh knowledge of `Canvas.js`. Set up `Board` object. Create controls for new board, pause, and reset.
-
-**Day 2**: Build ghost and snack-man objects. Connect them to the `Board` object. Set up snack-man to move automatically until the edges of the board.
-
-**Day 3**: Create snack-man's movement logic. Create logic for allowing snack-man to eat the ghosts.
-
-### Bonus features
-
-Additional features can include:
-
-- [ ] Different color schemes
-- [ ] randomized board set up
+## Future Features
+- High Scores, saved locally within the browser
+- New Maze layouts for different levels
