@@ -57,4 +57,4 @@ drawMaze(ctx) {
 
 ## Future Features
 - High Scores, saved locally within the browser
-- New Maze layouts for different levels
+- New levels with new, randomly generated mazes
